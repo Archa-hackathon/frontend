@@ -43,7 +43,7 @@
         return false;
     }
 
-	async function placeOrder(items: OrderItem[]) {
+	async function placeOrder() {
 		const url = `${API_ROOT}/bar/create_order`;
 
         if (!isValid()) {
@@ -72,7 +72,13 @@
             body: orderString
         });
         const response = await request.json();
-        alert(JSON.stringify(response));
+        if (!response.success) {
+            alert("Objednávka se nezdařila!");
+            return;
+        }
+        const secretid = response.secret_id;
+
+        window.location.href = `/piticko/order/${secretid}`;
 	}
 </script>
 

@@ -33,9 +33,5 @@
 			<button class="btn join-item">{quantity}</button>
 			<button class="btn join-item text-2xl" on:click={plus}>+</button>
 		</div>
-
-		<!-- <div class="card-actions justify-end">
-			<button class="btn btn-primary">Přidat</button>
-		</div> -->
 	</div>
 </div>
