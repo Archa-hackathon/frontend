@@ -11,10 +11,12 @@
 
 	let qrImage: string = '';
 
+	let refreshInterval: NodeJS.Timeout;
+
 	onMount(async () => {
 		// await update();
 
-		setInterval(update, 1000);
+		refreshInterval = setInterval(update, 1000);
 	});
 
 	async function update() {
@@ -27,10 +29,7 @@
 		if (orderStatus === true) {
 			const qrData: string = JSON.stringify({id: orderId, secret_id: data.secretid});
 			qrImage = await QRCode.toDataURL(qrData);
-			// QRCode.toCanvas(document.getElementById('qrcode'), qrData, function (error: any) {
-			// 	if (error) console.error(error)
-			// 	console.log('success!');
-			// })
+			clearTimeout(refreshInterval);
 		}
 	}
 </script>
