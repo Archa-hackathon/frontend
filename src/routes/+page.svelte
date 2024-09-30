@@ -1,5 +1,5 @@
-<script>
-	function clickHandler(event) {
+<script lang="ts">
+	function clickHandler(event: any) {
 		const url = event.target.closest('button').querySelector('a').href;
 		window.location.href = url;
 	}
