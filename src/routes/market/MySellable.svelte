@@ -1,6 +1,18 @@
 <script lang="ts">
+  //Props
+  let for_sale: boolean;
+  let id: string;
+  let name: string;
+  let desc: string;
+  let owner: string;
+  let price: number;
+  let watchers: string[];
+
+
+
+
   import { onDestroy } from 'svelte';
-  let price = 0;
+
 
   async function sell() {
     const userPrice = prompt("Please enter your selling price:", "");
@@ -14,7 +26,7 @@
         },
         body: JSON.stringify({ 
           price: price,
-          user: 'user-id',
+          user: 'a',
           id: 'item-id'
 
 
