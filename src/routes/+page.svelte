@@ -10,6 +10,10 @@
 		<a href="/piticko">Pitíčko</a>
 	</button>
 
+	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
+		<a href="/piticko/staffpanel">Pitíčko staff</a>
+	</button>
+
 	<button class="btn btn-primary text-white h-16 text-lg mx-5">
 		<a href="/onboarding">AI onboarding</a>
 	</button>

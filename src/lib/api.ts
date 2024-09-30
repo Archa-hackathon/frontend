@@ -18,3 +18,13 @@ export type Drinks = {
     currencySymbol: string,
     currency: string,
 };
+
+export type OrderItem = {
+    name: string;
+    quantity: number;
+};
+
+export type Order = {
+    order: OrderItem[];
+    user: String;
+};
