@@ -7,7 +7,7 @@
     // get items from orders
     let orders: Order[] = [];
 
-    let refreshIntervat: NodeJS.Timeout;
+    let refreshInterval: NodeJS.Timeout;
 
     let items: Drinks;
 
@@ -49,7 +49,7 @@
         items = await getItems();
         orders = await listOrders();
 
-        refreshIntervat = setInterval(async () => {
+        refreshInterval = setInterval(async () => {
             orders = await listOrders();
         }, 1000);
     });
