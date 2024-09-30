@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { API_ROOT, getItems, type Drinks } from '$lib/api.js';
+	import { API_ROOT, getItems, type Drinks, type Order } from '$lib/api.js';
 	import ItemCard from '$lib/ItemCard.svelte';
 
 	import { onMount, afterUpdate } from 'svelte';
@@ -24,15 +24,7 @@
         }
     });
 
-	type OrderItem = {
-		name: string;
-		quantity: number;
-	};
-
-	type Order = {
-		order: OrderItem[];
-		user: String;
-	};
+	
 
     function isValid() {
         for (let i = 0; i < drinks.drinks.length; i++) {
