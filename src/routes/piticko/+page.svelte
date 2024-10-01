@@ -78,7 +78,7 @@
 	<p>Loading...</p>
 {:else}
 	<div class="flex flex-col item-center justify-center content-center w-screen">
-		<div class="w-screen self-center justify-self-center">
+		<div class="w-screen self-center mt-6 justify-self-center">
 			{#each drinks.drinks as drink}
 				<ItemCard name={drink.name} price={drink.price} icon={drink.icon} currencySymbol={currencySymbol} bind:quantity={quantities[drinks.drinks.indexOf(drink)]} />
 			{/each}
