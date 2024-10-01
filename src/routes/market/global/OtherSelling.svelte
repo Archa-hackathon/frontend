@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
+    import { getUser } from '$lib/localstorage.ts';
 	//Props
 	// export let for_sale: boolean;
 	export let id: string = 'default';
@@ -10,7 +12,6 @@
 	export let img: string;
 	console.log(id);
 
-	import { onDestroy } from 'svelte';
 
 	async function buy() {
 
@@ -21,7 +22,7 @@
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				user: 'a',
+				user: getUser(),
 				id: id
 			})
 		});
@@ -41,12 +42,12 @@
 </script>
 
 <div
-	class="card bg-black border-white rounded-xl w-[90%] shadow-xl border-2 my-4 aspect-card flex flex-col items-center"
+	class="card bg-black border-white rounded-3xl w-[90%] shadow-xl border-2 my-4 aspect-card flex flex-col items-center last:mb-20"
 >
-	<img class="rounded-3xl mx-2 mb-0 mt-3 w-[90%]" src={img} alt="Shoes" />
+	<img class="rounded-xl mx-2 mb-0 mt-3 w-[90%]" src={img} alt="Shoes" />
 
 	<!-- Bottom div -->
-	<div class="w-full flex flex-col px-6">
+	<div class="w-full flex flex-col px-6 ">
 		<div class="flex flex-row justify-between">
 			<p class="w-full mt-2">@{owner}</p>
 			<p class="text-center my-2">{price}$A</p>
@@ -55,7 +56,7 @@
 			<!-- Left half -->
 			<div class="flex flex-col w-1/2">
 				<h2 class="card-title">{name}</h2>
-				<p>{desc}</p>
+				<p class="mb-3">{desc}</p>
 			</div>
 			<!-- Right half -->
 			<div class="flex flex-col w-1/2">

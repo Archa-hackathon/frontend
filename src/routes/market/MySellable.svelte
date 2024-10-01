@@ -48,9 +48,9 @@
 </script>
 
 <div
-	class="card bg-black border-white rounded-xl w-[90%] shadow-xl border-2 my-4 aspect-card flex flex-col items-center"
+	class="card bg-black border-white rounded-3xl w-[90%] shadow-xl border-2 my-4 aspect-card flex flex-col items-center last:mb-20"
 >
-	<img class="rounded-3xl mx-2 mb-0 mt-3 w-[90%]" src={img} alt="Shoes" />
+	<img class="rounded-xl mx-2 mb-0 mt-3 w-[90%]" src={img} alt="Shoes" />
 
 	<!-- Bottom div -->
 	<div class="w-full flex flex-col px-6">
@@ -59,7 +59,7 @@
 			<!-- Left half -->
 			<div class="flex flex-col w-1/2">
 				<h2 class="card-title">{name}</h2>
-				<p>{desc}</p>
+				<p class="mb-3">{desc}</p>
 			</div>
 			<!-- Right half -->
 			<div class="flex flex-col w-1/2">

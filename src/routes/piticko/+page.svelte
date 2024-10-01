@@ -84,5 +84,5 @@
 			{/each}
 		</div>
 	</div>
-    <button class="btn btn-primary" bind:this={submitButton} on:click={placeOrder}>Objednat</button>
+    <button class="btn btn-primary mb-16" bind:this={submitButton} on:click={placeOrder}>Objednat</button>
 {/if}

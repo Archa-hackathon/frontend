@@ -42,7 +42,7 @@
 </nav>
 
 
-<div class="w-screen flex flex-col items-center mt-16">
+<div class="w-screen flex flex-col items-center mt-16  ">
 	{#each cards as card, index}
 		{#if card.for_sale}
 			<MeSelling {...card} />
