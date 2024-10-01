@@ -36,8 +36,9 @@
 
 <h1 class="text-3xl text-center py-6 ">Moje Karty</h1>
 
+<div class="w-screen flex flex-col items-center">
 
-
+    
     
     {#each cards as card, index}
     {#if card.for_sale}
@@ -61,3 +62,4 @@
     {/each}
     
     
+</div>

@@ -36,13 +36,16 @@
     
     
     <h1 class="text-3xl text-center py-6">Karty na prodej</h1>
-    {#each cards as card, index}
+    <div class="w-screen flex flex-col items-center">
+
+        {#each cards as card, index}
         
         <OtherSelling {...card} />
-
         
-    
-    {/each}
-    
-
-    
+        
+        
+        {/each}
+        
+        
+        
+    </div>

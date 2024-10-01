@@ -1,11 +1,11 @@
 <script lang="ts">
 	//Props
-	export let for_sale: boolean;
+	// export let for_sale: boolean;
 	export let id: string = 'default';
 	export let name: string;
 	export let owner: string;
 	export let price: number;
-	export let watchers: string[];
+	// export let watchers: string[];
 	export let img: string;
 	export let desc: string;
 	console.log(id);
@@ -32,6 +32,7 @@
 
 			if (response.ok) {
 				console.log('Price posted successfully');
+        location.reload();
 				// Destroy the component after successful post
 				onDestroy(() => {
 					console.log('Component is being destroyed');
@@ -63,7 +64,7 @@
   <div class="w-full flex flex-col px-6">
 
     <p class="w-full mt-2">@{owner}</p>
-    <div class="w-full flex flex-row mt-6">
+    <div class="w-full flex flex-row mt-4">
       <!-- Left half -->
       <div class="flex flex-col w-1/2">
 
