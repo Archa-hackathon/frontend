@@ -75,7 +75,9 @@
 </script>
 
 {#if drinks.drinks.length === 0}
-	<p>Loading...</p>
+    <div class="h-[100svh] w-screen justify-center flex flex-row">
+        <span class="loading loading-spinner loading-lg"></span>
+    </div>
 {:else}
 	<div class="flex flex-col item-center justify-center content-center w-screen">
 		<div class="w-screen self-center mt-6 justify-self-center">
@@ -83,6 +85,7 @@
 				<ItemCard name={drink.name} price={drink.price} icon={drink.icon} currencySymbol={currencySymbol} bind:quantity={quantities[drinks.drinks.indexOf(drink)]} />
 			{/each}
 		</div>
+        <button class="btn btn-primary mb-16 w-32 self-end h-16" bind:this={submitButton} on:click={placeOrder}>Objednat</button>
 	</div>
     <button class="btn btn-primary mb-16" bind:this={submitButton} on:click={placeOrder}>Objednat</button>
 {/if}
