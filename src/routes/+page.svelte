@@ -14,11 +14,19 @@
 		<a href="/piticko/staffpanel">Pitíčko staff</a>
 	</button>
 
-	<button class="btn btn-primary text-white h-16 text-lg mx-5">
+	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
 		<a href="/onboarding">AI onboarding</a>
 	</button>
 
-	<button class="btn btn-primary text-white h-16 text-lg mx-5">
+	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
 		<a href="/hls">Human Language search</a>
+	</button>
+
+	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
+		<a href="/otazky">Otazky</a>
+	</button>
+
+	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
+		<a href="/userselect">Vybrat usera</a>
 	</button>
 </div>
