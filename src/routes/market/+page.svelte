@@ -34,25 +34,30 @@
 </script>
 
 
-<h1>Selling</h1>
-{#each cards as card, index}
+<h1 class="text-3xl text-center py-6 ">Moje Karty</h1>
+
+
+
+    
+    {#each cards as card, index}
     {#if card.for_sale}
-    <MeSelling ...card />
+    <MeSelling {...card} />
     {/if}
     
-
-{/each}
-
-
-
-<h1>Not for sale</h1>
-
-
-{#each cards as card, index}
+    
+    {/each}
+    
+    
+    
+    
+    
+    {#each cards as card, index}
     {#if !card.for_sale}
-    <MySellable ...card />
+    
+    <MySellable {...card} />
     {/if}
     
-
-{/each}
-
+    
+    {/each}
+    
+    
