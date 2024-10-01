@@ -15,11 +15,11 @@
 	</button>
 
 	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
-		<a href="/onboarding">AI onboarding</a>
+		<a href="/market">Moje Karty</a>
 	</button>
 
 	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
-		<a href="/hls">Human Language search</a>
+		<a href="/market/global">Market</a>
 	</button>
 
 	<button class="btn btn-primary text-white h-16 text-lg mx-5" on:click={clickHandler}>
