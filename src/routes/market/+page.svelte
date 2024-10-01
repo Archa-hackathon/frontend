@@ -32,9 +32,17 @@
 	});
 </script>
 
-<h1 class="text-3xl text-center py-6">Moje Karty</h1>
+<nav class="z-[8] fixed top-0 left-0 w-full bg-stone-800 py-4 px-6">
+    <div class="flex items-center justify-between">
+        <ul class="flex space-x-4 flex-row justify-between w-full">
+            <li class="text-primary">Moje Karty</li>
+            <a href="/market/global" class="text-white">Market</a>
+        </ul>
+    </div>
+</nav>
 
-<div class="w-screen flex flex-col items-center">
+
+<div class="w-screen flex flex-col items-center mt-16">
 	{#each cards as card, index}
 		{#if card.for_sale}
 			<MeSelling {...card} />
