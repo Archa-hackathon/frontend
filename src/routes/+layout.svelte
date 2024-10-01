@@ -6,7 +6,7 @@
 
 <div class="btm-nav">
 	<button on:click={()=>{window.location.href="/piticko";}}>
-		<img class="invert size-[20px]" src="https://cdn-icons-png.freepik.com/512/308/308556.png">
+		<img class="invert size-[20px]" src="https://cdn-icons-png.freepik.com/512/308/308556.png" alt="">
 	  </button>
 	<button on:click={()=>{window.location.href="/";}} class="">
 	  <svg
@@ -23,6 +23,6 @@
 	  </svg>
 	</button>
 	<button on:click={()=>{window.location.href="/market";}}>
-	  <img class="invert size-[20px]" src="https://cdn-icons-png.freepik.com/512/17402/17402759.png" />
+	  <img class="invert size-[20px]" src="https://cdn-icons-png.freepik.com/512/17402/17402759.png" alt=""/>
 	</button>
   </div>

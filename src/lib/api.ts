@@ -30,4 +30,5 @@ export type Order = {
     finished?: boolean;
     secret_id?: string,
     id?: number,
+    order?: OrderItem[],
 };

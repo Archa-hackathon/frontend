@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { API_ROOT, getItems, type Drinks, type Order } from '$lib/api.js';
+	import { API_ROOT, getItems, type Drinks, type Order, type OrderItem } from '$lib/api.js';
 	import ItemCard from '$lib/ItemCard.svelte';
 
 	import { onMount, afterUpdate } from 'svelte';
