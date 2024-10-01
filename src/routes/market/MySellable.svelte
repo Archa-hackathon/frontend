@@ -10,6 +10,11 @@
 	export let desc: string;
 	console.log(id);
 
+
+
+import { getUser } from '$lib/localstorage.js';
+	import { get } from 'http';
+
 	import { onDestroy } from 'svelte';
 
 	async function sell() {
@@ -25,7 +30,7 @@
 				},
 				body: JSON.stringify({
 					price: price,
-					user: 'a',
+					user: getUser(),
 					id: id
 				})
 			});

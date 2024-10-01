@@ -6,6 +6,7 @@
         import OtherSelling from './OtherSelling.svelte';
         import { onMount } from 'svelte';
         let cards = [];
+        import { getUser } from '$lib/localstorage.js';
     
         onMount(async () => {
             try {
@@ -17,7 +18,7 @@
                     body: JSON.stringify({ 
                         
                         
-                        "user": "a"
+                       "user": getUser()
                         
                      })
                 });

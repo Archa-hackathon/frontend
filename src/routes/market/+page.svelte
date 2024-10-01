@@ -6,6 +6,8 @@
     import { onMount } from 'svelte';
     let cards = [];
 
+import { getUser } from '$lib/localstorage.js';
+
     onMount(async () => {
         try {
             const response = await fetch('https://hack-back.stuckinvim.com/market/my_collection', {
@@ -16,7 +18,7 @@
                 body: JSON.stringify({ 
                     
                     
-                    "user": "a"
+                    "user": getUser()
                     
                  })
             });

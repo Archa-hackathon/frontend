@@ -10,6 +10,8 @@
 	// export let watchers: string[];
 	console.log(id);
 
+import { getUser } from '$lib/localstorage.js';
+
 	import { onDestroy } from 'svelte';
 
 	async function stopSell() {
@@ -25,7 +27,7 @@
 			},
 			body: JSON.stringify({
 				price: 0,
-				user: 'a',
+				user: getUser(),
 				id: id
 			})
 		});
