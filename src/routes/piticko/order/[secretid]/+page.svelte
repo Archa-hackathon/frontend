@@ -46,7 +46,9 @@
 </script>
 
 {#if orderStatus === null}
-	<div>Loading...</div>
+<div class="h-[100svh] w-screen justify-center flex flex-row">
+	<span class="loading loading-spinner loading-lg"></span>
+</div>
 {:else}
 	<div class="flex flex-col justify-center items-center text-xl mt-5 mx-8">
 		<span class="text-2xl">Číslo objednávky:</span>
