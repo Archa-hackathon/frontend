@@ -51,9 +51,9 @@
         }
 
         const order: Order = {
-            order: orderItems,
-            user: "idk"
-        };
+			order: orderItems,
+			user: "idk",
+		};
 
         const orderString = JSON.stringify(order);
         const request = await fetch(url, {
