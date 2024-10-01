@@ -17,7 +17,7 @@
     }
 </script>
 
-<div class="card lg:card-side bg-base-100 shadow-xl flex flex-row">
+<div class="card lg:card-side bg-base-100 flex flex-row">
 	<!-- <figure> -->
 	<img
 		class="size-32"

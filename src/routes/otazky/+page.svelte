@@ -90,10 +90,11 @@
 <div class="h-[100svh] w-screen justify-center flex flex-col">
 	{#if shouldDisplayFinalScore}
         <div class="mt-8 ml-8 mr-8 bg-base-200 rounded-lg pt-4 mb-2">
-            <h1 class="text-2xl text-secondary text-center">Konečné skóre: {score}/{questions.length}</h1>
+            <h1 class="text-2xl text-secondary text-center">Konečné skóre: {score}</h1>
             <button class="btn btn-primary w-full mt-2" on:click={reset}>Začít znovu</button>
         </div>
     {:else}
+		{#if questions.length > 0}
 		{#each questions as question}
 			{#if question === questions[questionIndex]}
 				<!-- Outgoing question flies out to the left, incoming question flies in from the right -->
@@ -135,5 +136,10 @@
 				</div>
 			{/if}
 		{/each}
+		{:else}
+			<div class="h-[100svh] w-screen justify-center flex flex-col text-center self-center">
+				<p class="text-2xl mx-8">Momentálně nejsou dostupné žádné otázky.</p>
+			</div>
+		{/if}
 	{/if}
 </div>
