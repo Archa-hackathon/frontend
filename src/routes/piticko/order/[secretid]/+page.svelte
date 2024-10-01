@@ -31,6 +31,10 @@
 		orderStatus = response.finished;
 		orderId = response.id;
 
+		if (orderId === undefined) {
+			window.location.href = "/piticko";
+		}
+
 		if (orderStatus === true) {
 			qrData = JSON.stringify({ id: orderId, secret_id: data.secretid });
 			// qrImage = await QRCode.toDataURL(qrData, {
