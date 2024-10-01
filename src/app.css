@@ -1,3 +1,14 @@
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+}
+    
+/* For other browsers that don't support the above */
+html, body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
