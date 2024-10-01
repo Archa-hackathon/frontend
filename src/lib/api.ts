@@ -25,6 +25,9 @@ export type OrderItem = {
 };
 
 export type Order = {
-    order: OrderItem[];
+    items: OrderItem[];
     user: String;
+    finished?: boolean;
+    secret_id?: string,
+    id?: number,
 };
