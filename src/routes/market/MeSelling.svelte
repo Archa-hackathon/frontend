@@ -10,7 +10,7 @@
 	// export let watchers: string[];
 	console.log(id);
 
-import { getUser } from '$lib/localstorage.js';
+	import { getUser } from '$lib/localstorage.js';
 
 	import { onDestroy } from 'svelte';
 
@@ -34,7 +34,7 @@ import { getUser } from '$lib/localstorage.js';
 
 		if (response.ok) {
 			console.log('Price posted successfully');
-      location.reload();
+			location.reload();
 			// Destroy the component after successful post
 			onDestroy(() => {
 				console.log('Component is being destroyed');
@@ -46,62 +46,28 @@ import { getUser } from '$lib/localstorage.js';
 	}
 </script>
 
-<!-- 
 
+<div
+	class="card bg-black border-white rounded-xl w-[90%] shadow-xl border-2 my-4 aspect-card flex flex-col items-center"
+>
+	<img class="rounded-3xl mx-2 mb-0 mt-3 w-[90%]" src={img} alt="Shoes" />
 
-<div class="card bg-black border-white rounded-xl w-96 shadow-xl border-2 my-4 aspect-card">
-	<figure>
-		<img class="rounded-3xl m-4 mb-0" src={img} alt="Shoes" />
-	</figure>
-  <p class="ml-6">@{owner}</p>
-	<div class="card-body mt-0">
-		<h2 class="card-title">{name}</h2>
-		<p class="">{desc}</p>
-		<div class="card-actions justify-end">
-			<button on:click={stopSell} class="btn btn-primary">Stop Selling</button>
+	<!-- Bottom div -->
+	<div class="w-full flex flex-col px-6">
+		<div class="flex flex-row justify-between">
+			<p class="w-full mt-2">@{owner}</p>
+			<p class="text-center my-2">{price}$A</p>
+		</div>
+		<div class="w-full flex flex-row mt-4">
+			<!-- Left half -->
+			<div class="flex flex-col w-1/2">
+				<h2 class="card-title">{name}</h2>
+				<p>{desc}</p>
+			</div>
+			<!-- Right half -->
+			<div class="flex flex-col w-1/2">
+				<button on:click={stopSell} class="btn btn-primary">Stop selling</button>
+			</div>
 		</div>
 	</div>
-</div> -->
-
-
-
-
-<div class="card bg-black border-white rounded-xl w-[90%] shadow-xl border-2 my-4 aspect-card flex flex-col items-center">
-  <img class="rounded-3xl mx-2 mb-0 mt-3 w-[90%]" src={img} alt="Shoes" />
-<!-- <p class="ml-6">@{owner}</p>
-<div class="card-body flex flex-col mt-0 w-full">
-  <h2 class="card-title">{name}</h2>
-  <div class="flex flex-row">
-
-    <p class="">{desc}</p>
-    <div class="card-actions justify-end">
-      <button on:click={sell} class="btn btn-primary">Sell</button>
-    </div>
-  </div>
-</div> -->
-
-<!-- Bottom div -->
-<div class="w-full flex flex-col px-6">
-<div class="flex flex-row  justify-between">
-  
-  <p class="w-full mt-2">@{owner}</p>
-  <p class="text-center my-2">{price}$A</p>
-</div>
-  <div class="w-full flex flex-row mt-4">
-    <!-- Left half -->
-    <div class="flex flex-col w-1/2">
-
-      <h2 class="card-title">{name}</h2>
-      <p>{desc}</p>
-    </div>
-    <!-- Right half -->
-      <div class="flex flex-col w-1/2">
-        <button on:click={stopSell} class="btn btn-primary">Stop selling</button>
-        
-      </div>
-
-
-  </div>
-
-</div>
 </div>
