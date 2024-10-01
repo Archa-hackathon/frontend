@@ -6,7 +6,7 @@
         import OtherSelling from './OtherSelling.svelte';
         import { onMount } from 'svelte';
         let cards = [];
-        import { getUser } from '$lib/localstorage.js';
+        import { getUser } from '$lib/localstorage.ts';
     
         onMount(async () => {
             try {
